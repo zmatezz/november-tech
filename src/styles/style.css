@@ -12,6 +12,10 @@
     --cor-texto: #ffffff;
 }
 
+body {
+    background-color: var(--cor-primaria);
+}
+
 
 
 
