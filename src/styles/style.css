@@ -8,7 +8,7 @@
 :root {
     --cor-primaria: #1A1D28;
     --cor-secundaria: #1DB095;
-    --cor-cards : #2E3142;
+    --cor-cards: #2E3142;
     --cor-texto: #ffffff;
 }
 
@@ -21,7 +21,60 @@ body {
 
 /* COMEÇO - MARCOS */
 
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid #2E3142;
+}
 
+.container__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+}
+
+.container__header img {
+    width: 180px;
+}
+
+.header__nav li {
+    display: inline-block;
+    padding: 32px 20px;
+    position: relative;
+}
+
+.header__nav li:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--cor-secundaria);
+
+}
+
+.header__nav li a {
+    text-decoration: none;
+    color: #9CA3AF;
+}
+
+.header__nav li a:hover {
+    color: var(--cor-texto);
+}
+
+
+
+body{
+    height: 500vh;
+}
 
 
 /* FIM - MARCOS */
