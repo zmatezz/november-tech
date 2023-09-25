@@ -67,6 +67,19 @@ header {
   color: var(--cor-texto);
 }
 
+.header__menu {
+  display: none;
+  padding: 18.5px;
+}
+
+.header__menu i {
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 5px
+}
+
 /* FIM - MARCOS */
 
 /* COMEÇO - ALAN */
