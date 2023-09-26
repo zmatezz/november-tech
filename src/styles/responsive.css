@@ -22,7 +22,7 @@
         z-index: 1;
         height: 100vh;
         background-color: var(--cor-primaria);
-        margin: 15% 0;
+        justify-content: center;
     }
 
     .header__nav--mobile ul {
