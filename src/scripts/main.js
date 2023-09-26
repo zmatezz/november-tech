@@ -1,6 +1,7 @@
 const iconMenu = document.querySelector("#i-menu");
 const iconClose = document.querySelector("#i-close");
 const navMobile = document.querySelector("#nav-mobile");
+const linksNav = document.querySelectorAll('.scroll-link');
 
 const obterEstilo = (elemento) => {
     const style = window.getComputedStyle(elemento);
@@ -31,6 +32,36 @@ iconClose.onclick = function () {
     alterarIcone(iconClose, iconMenu);
     estadoNavMobile(false);
 };
+
+
+linksNav.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        alterarIcone(iconClose, iconMenu);
+        estadoNavMobile(false);
+
+
+        const targetId = link.getAttribute('href').substring(1);
+
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            if(targetSection.id == 'home') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            const targetOffset = targetSection.offsetTop - 50;
+
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 window.onresize = function () {
     if (window.innerWidth >= 1024) {
