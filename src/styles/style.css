@@ -22,6 +22,7 @@ body {
 header {
   display: flex;
   position: fixed;
+  background-color: var(--cor-primaria);
   top: 0;
   width: 100%;
   justify-content: center;
