@@ -216,14 +216,6 @@ header {
   gap: 40px;
   padding: 60px 40px;
   height: 100%;
-
-  @media screen and (min-width: 991px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    height: 100%;
-  }
 }
 
 .contact-title {
@@ -257,11 +249,6 @@ header {
   gap: 40px;
   width: 100%;
 
-  @media screen and (min-width: 991px) {
-    flex-direction: row;
-    width: 70%;
-  }
-
   > .contact-info {
     display: flex;
     flex-direction: column;
@@ -273,11 +260,6 @@ header {
       gap: 10px;
       justify-content: center;
       margin-bottom: 20px;
-
-      @media screen and (min-width: 991px) {
-        justify-content: start;
-        margin-bottom: 0px;
-      }
 
       > i {
         font-size: 40px;
@@ -342,9 +324,6 @@ header {
       padding: 32px;
       margin: 0 auto;
       gap: 40px;
-      @media screen and (min-width: 991px) {
-        flex-direction: row;
-      }
 
       > .form {
         display: flex;
@@ -357,18 +336,12 @@ header {
         height: 330px;
         width: 100%;
 
-        @media screen and (min-width: 991px) {
-          width: 500px;
-        }
-
         > label {
           position: relative;
           height: 100%;
           width: 80%;
           margin: 0 auto;
-          @media screen {
-            width: 100%;
-          }
+          
 
           > input {
             font-size: medium;
@@ -403,10 +376,6 @@ header {
       > iframe {
         border-radius: 20px;
         width: 100%;
-
-        @media screen and (min-width: 991px) {
-          max-width: 60%;
-        }
       }
     }
   }
@@ -452,13 +421,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 16px;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-  }
 }
 
 .footer-logo {
@@ -523,9 +485,6 @@ footer {
 
 .nav-footer {
   margin-top: 16px;
-  @media screen and (min-width: 768px) {
-    width: 192px;
-  }
 }
 
 .nav-footer p {
@@ -536,10 +495,6 @@ footer {
 .nav-footer li {
   list-style: none;
   text-align: center;
-
-  @media screen and (min-width: 768px) {
-    text-align: start;
-  }
 }
 
 .back-to-top {
@@ -555,12 +510,6 @@ footer {
   justify-content: center;
   transition: bottom 0.4s, transform 0.4s;
   text-decoration: none;
-
-  @media screen and (min-width: 768px) {
-    right: 6rem;
-    bottom: 6rem;
-    
-  }
 
   > i {
     color: white;
