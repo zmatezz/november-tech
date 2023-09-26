@@ -62,7 +62,7 @@ header {
 
 .header__nav li a {
   text-decoration: none;
-  color: #9ca3af;
+  color: var(--cor-terciaria);
 }
 
 .header__nav li a:hover {
@@ -102,8 +102,6 @@ header {
   width: 100%;
   max-height: 100%;
   margin-top: 100px;
-  border-top: 1px solid var(--cor-secundaria);
-  border-bottom: 1px solid var(--cor-secundaria);
 }
 
 .txt-projetos {
@@ -180,7 +178,29 @@ header {
   text-align: center;
   color: var(--cor-texto);
   font-weight: 500;
-  margin-top: 10px;
+  height: 50px;
+}
+
+.bottom-card i{
+  font-size: 25px;
+}
+
+.icones{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.link-icones{
+  text-align: center;
+  text-decoration: none;
+  color: var(--cor-terciaria);
+  padding: 5px;
+  transition: filter 0.80s ease-in;
+}
+
+.link-icones:hover{
+  transition: 300ms linear; 
+  color: var(--cor-secundaria);
 }
 
 /* FIM - KAWÃ */
@@ -480,7 +500,7 @@ footer {
 }
 
 .social-icons a {
-  color: #9ca3af;
+  color: var(--cor-terciaria);
   font-size: 32px;
   text-decoration: none;
   transition: color 0.25s ease-in;
@@ -529,7 +549,7 @@ footer {
   width: 48px;
   height: 48px;
   border-radius: 100%;
-  background-color: #1db095;
+  background-color: var(--cor-secundaria);
   display: flex;
   align-items: center;
   justify-content: center;
