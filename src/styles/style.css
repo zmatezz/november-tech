@@ -159,6 +159,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.7s;
+}
+
+.card:hover,
+.card:focus {
+    transform: scale(1.02);
+    transition: transform 0.7s;
 }
 
 .top-card {
