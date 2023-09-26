@@ -1,7 +1,6 @@
 const iconMenu = document.querySelector("#i-menu");
 const iconClose = document.querySelector("#i-close");
 const navMobile = document.querySelector("#nav-mobile");
-const imgFooter = document.querySelector("#img-footer");
 
 const obterEstilo = (elemento) => {
     const style = window.getComputedStyle(elemento);
@@ -18,10 +17,8 @@ const alterarIcone = (iconeVisivel, iconeOculto) => {
 const estadoNavMobile = (estado) => {
     if (obterEstilo(navMobile).display == "none" && estado == true) {
         navMobile.style.display = "flex";
-        imgFooter.style.display = "none";
     } else {
         navMobile.style.display = "none";
-        imgFooter.style.display = "inline";
     }
 };
 

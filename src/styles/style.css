@@ -27,6 +27,8 @@ header {
   width: 100%;
   justify-content: center;
   border-bottom: 1px solid #2e3142;
+  z-index: 1;
+
 }
 
 .container__header {
