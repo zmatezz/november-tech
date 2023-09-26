@@ -81,9 +81,9 @@ header {
 .header__menu i {
   color: #ffffff;
   cursor: pointer;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   padding: 10px;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 /* FIM - MARCOS */
@@ -235,11 +235,11 @@ header {
   width: 80%;
   margin: 0 auto;
   gap: 40px;
+  width: 100%;
 
   @media screen and (min-width: 991px) {
     flex-direction: row;
     width: 70%;
-    
   }
 
   > .contact-info {
@@ -258,7 +258,6 @@ header {
         justify-content: start;
         margin-bottom: 0px;
       }
-
 
       > i {
         font-size: 40px;
@@ -297,6 +296,7 @@ header {
     background-color: #2e3142;
     border-radius: 20px;
     width: 100%;
+    
 
     > .form-title {
       display: flex;
@@ -311,7 +311,6 @@ header {
         font-weight: 500;
         text-align: center;
         font-size: 24px;
-        
       }
     }
 
@@ -340,7 +339,6 @@ header {
 
         @media screen and (min-width: 991px) {
           width: 500px;
-          
         }
 
         > label {
@@ -351,7 +349,6 @@ header {
           @media screen {
             width: 100%;
           }
-
 
           > input {
             font-size: medium;
@@ -389,7 +386,6 @@ header {
 
         @media screen and (min-width: 991px) {
           max-width: 60%;
-          
         }
       }
     }
@@ -526,4 +522,33 @@ footer {
   }
 }
 
+.back-to-top {
+  right: 1rem;
+  bottom: 2rem;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #1db095;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.4s, transform 0.4s;
+  text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    right: 6rem;
+    bottom: 6rem;
+    
+  }
+
+  > i {
+    color: white;
+    font-size: 32px;
+  }
+}
+
+.back-to-top:hover {
+  transform: translateY(-0.5rem);
+}
 /* FIM - MATHEUS */
