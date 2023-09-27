@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       );
 
-      console.log("Resposta da API:", response.data);
+      response.data;
 
       setTimeout(function () {
         gif.style.visibility = "hidden";
@@ -128,5 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
 $(function () {
   $("#datepicker").datepicker({
     minDate: 0,
+    dateFormat: "dd/mm/yy",
   });
 });
