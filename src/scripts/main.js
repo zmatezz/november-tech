@@ -83,10 +83,6 @@ window.onscroll = () => {
       backToTopButton.classList.add('hide');
     }
   }
-  
-
-
-
 
 /* Matheus */
 document.addEventListener("DOMContentLoaded", function() {
