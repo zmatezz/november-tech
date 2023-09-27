@@ -63,21 +63,17 @@ linksNav.forEach((link) => {
 });
 
 window.onresize = function () {
-    if (window.innerWidth >= 1024) {
-        alterarIcone(iconClose, iconMenu);
-        estadoNavMobile(false);
-    }
+  if (window.innerWidth >= 1024) {
+    alterarIcone(iconClose, iconMenu);
+    estadoNavMobile(false);
+  }
 };
 
-
-
-
-
-
-
 /* Matheus */
-document.addEventListener("DOMContentLoaded", function() {
-    const backToTopButton = document.querySelector(".back-to-top");
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopButton = document.querySelector(".back-to-top");
+  const submitButton = document.getElementById("submitButton");
+  const gif = document.querySelector(".form-modal");
 
   backToTopButton.addEventListener("click", function (e) {
     e.preventDefault();
@@ -119,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       );
 
-      console.log("Resposta da API:", response.data);
+      response.data;
 
       setTimeout(function () {
         gif.style.visibility = "hidden";
@@ -128,10 +124,24 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(error);
     }
   });
-});
 
-$(function () {
-  $("#datepicker").datepicker({
-    minDate: 0,
+  $(function () {
+    $("#datepicker").datepicker({
+      minDate: 0,
+      dateFormat: "dd/mm/yy",
+    });
   });
 });
+
+function formatarTelefone(input) {
+  let numero = input.value.replace(/\D/g, "");
+
+  if (numero.length > 2) {
+    numero = "(" + numero.substring(0, 2) + ") " + numero.substring(2);
+  }
+  if (numero.length > 10) {
+    numero = numero.substring(0, 10) + "-" + numero.substring(10);
+  }
+
+  input.value = numero;
+}

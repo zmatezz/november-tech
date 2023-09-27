@@ -13,7 +13,13 @@
     <link rel="stylesheet" href="./src/styles/responsive.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- jQuery UI -->
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -278,6 +284,9 @@
                     name="Telefone"
                     type="tel"
                     placeholder=""
+                    oninput="formatarTelefone(this)"
+                    maxlength="15"
+                    minlength="15"
                     required
                   />
                   <span>Telefone</span>
@@ -290,6 +299,7 @@
                     id="datepicker"
                     placeholder=""
                     required
+                    readonly
                   />
                   <span>Data</span>
                 </label>
