@@ -216,7 +216,7 @@ header {
 
 /* COMEÇO - MATHEUS */
 /* Footer */
-.contato {
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -289,6 +289,11 @@ header {
                 > a {
                     color: var(--cor-texto);
                     text-decoration: none;
+                    transition: color 0.25s ease-in;
+                }
+
+                > a:hover {
+                    color: var(--cor-secundaria);
                 }
 
                 > .contact-address {
@@ -377,6 +382,7 @@ header {
 
                 > .submit:hover {
                     transform: scale(1.05);
+                    cursor: pointer;
                 }
             }
 
@@ -386,6 +392,38 @@ header {
             }
         }
     }
+}
+
+.form-modal{
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+
+  > img {
+    width: 120px;
+  }
+
+  > p {
+    color: var(--cor-texto);
+    font-size: 24px;
+  }
+
+  > span {
+    color: var(--cor-texto);
+    font-size: 20px;
+  }
 }
 
 .form label .input + span {
