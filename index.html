@@ -203,12 +203,7 @@
             <div class="contact-form">
               <form class="form">
                 <label>
-                  <input 
-                  class="input" 
-                  name="Nome" 
-                  type="text" 
-                  required 
-                  />
+                  <input class="input" name="Nome" type="text" required />
                   <span>Nome completo</span>
                 </label>
 
@@ -218,6 +213,9 @@
                     name="Telefone"
                     type="tel"
                     placeholder=""
+                    oninput="formatarTelefone(this)"
+                    maxlength="15"
+                    minlength="15"
                     required
                   />
                   <span>Telefone</span>

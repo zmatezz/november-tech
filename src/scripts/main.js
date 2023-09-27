@@ -123,11 +123,24 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(error);
     }
   });
-});
 
-$(function () {
-  $("#datepicker").datepicker({
-    minDate: 0,
-    dateFormat: "dd/mm/yy",
+  $(function () {
+    $("#datepicker").datepicker({
+      minDate: 0,
+      dateFormat: "dd/mm/yy",
+    });
   });
+
+  function formatarTelefone(input) {
+    let numero = input.value.replace(/\D/g, "");
+
+    if (numero.length > 2) {
+      numero = "(" + numero.substring(0, 2) + ") " + numero.substring(2);
+    }
+    if (numero.length > 10) {
+      numero = numero.substring(0, 10) + "-" + numero.substring(10);
+    }
+
+    input.value = numero;
+  }
 });
