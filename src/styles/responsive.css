@@ -59,7 +59,7 @@
 }
 
 @media screen and (min-width: 991px) {
-    .contato {
+    .contact {
         display: flex;
         flex-direction: column;
         align-items: center;

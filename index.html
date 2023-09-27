@@ -13,12 +13,18 @@
     <link rel="stylesheet" href="./src/styles/responsive.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- jQuery UI -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
     <!-- icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -28,6 +34,10 @@
       src="https://kit.fontawesome.com/fcd4d39998.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
     <header id="home" class="home">
@@ -78,25 +88,25 @@
             <h1>Projetos Inovadores</h1>
             <h3>Dados relevantes ao longo da nossa jornada</h3>
           </div>
-      
+
           <div class="card-projects">
             <div class="card">
               <div class="top-card">
                 <img src="src/assets/img/livraria.png" alt="" />
               </div>
               <div class="bottom-card">
-                <p class="txt-card">Livraria Mooca</p>
+                <p class="txt-card">Livraria</p>
                 <div class="icones">
-                  <a 
-                    href="https://github.com/Kawa-github/Livraria" 
-                    class="link-icones" 
+                  <a
+                    href="https://github.com/Kawa-github/Livraria"
+                    class="link-icones"
                     target="_blank"
                   >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a 
-                    href="https://kawa-github.github.io/Livraria/" 
-                    class="link-icones" 
+                  <a
+                    href="https://kawa-github.github.io/Livraria/"
+                    class="link-icones"
                     target="_blank"
                   >
                     <i class="fa-solid fa-code"></i>
@@ -111,16 +121,16 @@
               <div class="bottom-card">
                 <div class="icones">
                   <p class="txt-card">Consumindo API Naruto</p>
-                  <a 
-                    href="https://github.com/Kawa-github/API-Naruto" 
-                    class="link-icones" 
+                  <a
+                    href="https://github.com/Kawa-github/API-Naruto"
+                    class="link-icones"
                     target="_blank"
                   >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a 
-                    href="https://kawa-github.github.io/API-Naruto/" 
-                    class="link-icones" 
+                  <a
+                    href="https://kawa-github.github.io/API-Naruto/"
+                    class="link-icones"
                     target="_blank"
                   >
                     <i class="fa-solid fa-code"></i>
@@ -130,86 +140,25 @@
             </div>
             <div class="card">
               <div class="top-card">
-                <img src="./src/assets/img/portfolio-matheus.png" alt="Portfolio do integrante Matheus Guedes" />
+                <img src="" alt="" />
               </div>
               <div class="bottom-card">
                 <div class="icones">
-                  <p class="txt-card">Portfolio Matheus Guedes</p>
-                  <a 
-                    href="https://github.com/zmatezz/portfolio-zmatez" 
-                    class="link-icones" 
-                    target="_blank"
-                  >
+                  <p class="txt-card">txt</p>
+                  <a href="#" class="link-icones" target="_blank">
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a 
-                    href="https://zmatezz.github.io/portfolio-zmatez/" 
-                    class="link-icones" 
-                    target="_blank"
-                  >
+                  <a href="#" class="link-icones" target="_blank">
                     <i class="fa-solid fa-code"></i>
                   </a>
                 </div>
               </div>
             </div>
-
-            <div class="card">
-              <div class="top-card">
-                <img src="./src/assets/img/animais-fantasticos.png" alt="Projeto Animais Fantasticos" />
-              </div>
-              <div class="bottom-card">
-                <div class="icones">
-                  <p class="txt-card">Animais Fantasticos (em produção)</p>
-                  <a 
-                    href="https://github.com/yomarcoslinss/animais-fantasticos" 
-                    class="link-icones" 
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a 
-                    href="https://yomarcoslinss.github.io/animais-fantasticos/" 
-                    class="link-icones" 
-                    target="_blank"
-                  >
-                    <i class="fa-solid fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="top-card">
-                <img src="./src/assets/img/decodificador-texto.png" alt="Projeto Decodificador de Texto" />
-              </div>
-              <div class="bottom-card">
-                <div class="icones">
-                  <p class="txt-card">Decodificador de Texto</p>
-                  <a 
-                    href="https://github.com/yomarcoslinss/one-decodificador-de-texto" 
-                    class="link-icones" 
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a 
-                    href="https://yomarcoslinss.github.io/one-decodificador-de-texto/" 
-                    class="link-icones" 
-                    target="_blank"
-                  >
-                    <i class="fa-solid fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            
           </div>
         </div>
       </section>
-      
 
-      <section id="contato" class="contato">
+      <section id="contato" class="contact">
         <!-- Matheus  -->
 
         <div class="contact-title">
@@ -254,25 +203,38 @@
             <div class="contact-form">
               <form class="form">
                 <label>
-                  <input class="input" type="text" placeholder="" required="" />
+                  <input class="input" name="Nome" type="text" required />
                   <span>Nome completo</span>
                 </label>
 
                 <label>
-                  <input class="input" type="tel" placeholder="" required="" />
+                  <input
+                    class="input"
+                    name="Telefone"
+                    type="tel"
+                    placeholder=""
+                    oninput="formatarTelefone(this)"
+                    maxlength="15"
+                    minlength="15"
+                    required
+                  />
                   <span>Telefone</span>
                 </label>
 
                 <label>
                   <input
                     class="input"
-                    type="datetime-local"
+                    name="Data"
+                    id="datepicker"
                     placeholder=""
-                    required=""
+                    required
+                    readonly
                   />
                   <span>Data</span>
                 </label>
-                <button class="submit">Enviar</button>
+                <button class="submit" id="submitButton" type="button">
+                  Enviar
+                </button>
               </form>
 
               <iframe
@@ -285,9 +247,20 @@
             </div>
           </div>
         </div>
+
+        <div class="form-modal">
+          <img
+            src="https://res.cloudinary.com/dgeeyohmv/image/upload/v1695772423/mep5ys34t1mhep4ahehy.gif"
+            alt=""
+          />
+          <p class="text-white text-2xl">Visita agendada.</p>
+          <span class="text-white text-xl"
+            >Entraremos em contato, obrigado!</span
+          >
+        </div>
       </section>
       <a class="back-to-top" href="#">
-        <i class='bx bx-up-arrow-alt'></i>
+        <i class="bx bx-up-arrow-alt"></i>
       </a>
     </main>
     <footer>

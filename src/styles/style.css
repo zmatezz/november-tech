@@ -159,13 +159,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.7s;
-}
-
-.card:hover,
-.card:focus {
-    transform: scale(1.02);
-    transition: transform 0.7s;
 }
 
 .top-card {
@@ -216,7 +209,7 @@ header {
 
 /* COMEÇO - MATHEUS */
 /* Footer */
-.contato {
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -289,6 +282,11 @@ header {
                 > a {
                     color: var(--cor-texto);
                     text-decoration: none;
+                    transition: color 0.25s ease-in;
+                }
+
+                > a:hover {
+                    color: var(--cor-secundaria);
                 }
 
                 > .contact-address {
@@ -377,6 +375,7 @@ header {
 
                 > .submit:hover {
                     transform: scale(1.05);
+                    cursor: pointer;
                 }
             }
 
@@ -386,6 +385,38 @@ header {
             }
         }
     }
+}
+
+.form-modal{
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+
+  > img {
+    width: 120px;
+  }
+
+  > p {
+    color: var(--cor-texto);
+    font-size: 24px;
+  }
+
+  > span {
+    color: var(--cor-texto);
+    font-size: 20px;
+  }
 }
 
 .form label .input + span {
@@ -403,12 +434,17 @@ header {
     font-size: 0.9em;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:focus + span {
     color: var(--cor-secundaria);
     top: 0px;
     font-size: 0.7em;
     font-weight: 600;
+}
+
+.form label .input:valid + span {
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
 }
 
 /* Footer */
@@ -505,8 +541,6 @@ footer {
 }
 
 .back-to-top {
-    opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
     right: 1rem;
     bottom: 2rem;
     position: fixed;
@@ -514,51 +548,19 @@ footer {
     height: 48px;
     border-radius: 100%;
     background-color: var(--cor-secundaria);
-    transform: scale(0);
-    transform-origin: center;
+    display: flex;
     align-items: center;
     justify-content: center;
+    transition: bottom 0.4s, transform 0.4s;
     text-decoration: none;
-    display: flex;
-  }
-  
-  .back-to-top > i {
-    color: white;
-    font-size: 32px;
-    transform: rotate(0deg);
-    transition: transform 0.4s;
-  }
-  
-  .show {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .hide {
-    opacity: 0;
-    transform: scale(0);
-  }
-  
-  
-  
-  
+
+    > i {
+        color: white;
+        font-size: 32px;
+    }
+}
+
 .back-to-top:hover {
     transform: translateY(-0.5rem);
 }
 /* FIM - MATHEUS */
-
-
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #2e3142;
-    border-radius: 14px;
-    border: 3px solid #1a1d28;
-}
-
-::-webkit-scrollbar-track {
-    background: #1a1d28;
-    border-radius: 5px
-}
