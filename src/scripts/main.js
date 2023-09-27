@@ -1,5 +1,6 @@
 const iconMenu = document.querySelector("#i-menu");
 const iconClose = document.querySelector("#i-close");
+const backToTopButton = document.querySelector(".back-to-top");
 const navMobile = document.querySelector("#nav-mobile");
 const linksNav = document.querySelectorAll('.scroll-link');
 
@@ -63,22 +64,34 @@ linksNav.forEach(link => {
     });
 });
 
-window.onresize = function () {
+window.onresize = () => {
     if (window.innerWidth >= 1024) {
         alterarIcone(iconClose, iconMenu);
         estadoNavMobile(false);
     }
 };
 
+const teste = window.scrollY;
 
 
+window.onscroll = () => {
+    if (window.scrollY > 500) {
+      backToTopButton.classList.remove('hide');
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+      backToTopButton.classList.add('hide');
+    }
+  }
+  
 
 
 
 
 /* Matheus */
 document.addEventListener("DOMContentLoaded", function() {
-    const backToTopButton = document.querySelector(".back-to-top");
+
+    
 
     backToTopButton.addEventListener("click", function(e) {
         e.preventDefault();
