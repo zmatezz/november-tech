@@ -159,13 +159,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.7s;
-}
-
-.card:hover,
-.card:focus {
-    transform: scale(1.02);
-    transition: transform 0.7s;
 }
 
 .top-card {
@@ -548,8 +541,6 @@ footer {
 }
 
 .back-to-top {
-    opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
     right: 1rem;
     bottom: 2rem;
     position: fixed;
@@ -557,51 +548,19 @@ footer {
     height: 48px;
     border-radius: 100%;
     background-color: var(--cor-secundaria);
-    transform: scale(0);
-    transform-origin: center;
+    display: flex;
     align-items: center;
     justify-content: center;
+    transition: bottom 0.4s, transform 0.4s;
     text-decoration: none;
-    display: flex;
-  }
-  
-  .back-to-top > i {
-    color: white;
-    font-size: 32px;
-    transform: rotate(0deg);
-    transition: transform 0.4s;
-  }
-  
-  .show {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .hide {
-    opacity: 0;
-    transform: scale(0);
-  }
-  
-  
-  
-  
+
+    > i {
+        color: white;
+        font-size: 32px;
+    }
+}
+
 .back-to-top:hover {
     transform: translateY(-0.5rem);
 }
 /* FIM - MATHEUS */
-
-
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #2e3142;
-    border-radius: 14px;
-    border: 3px solid #1a1d28;
-}
-
-::-webkit-scrollbar-track {
-    background: #1a1d28;
-    border-radius: 5px
-}
