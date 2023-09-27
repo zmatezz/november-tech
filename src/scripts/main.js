@@ -130,6 +130,19 @@ document.addEventListener("DOMContentLoaded", function () {
       dateFormat: "dd/mm/yy",
     });
   });
+
+  function formatarTelefone(input) {
+    let numero = input.value.replace(/\D/g, "");
+
+    if (numero.length > 2) {
+      numero = "(" + numero.substring(0, 2) + ") " + numero.substring(2);
+    }
+    if (numero.length > 10) {
+      numero = numero.substring(0, 10) + "-" + numero.substring(10);
+    }
+
+    input.value = numero;
+  }
 });
 
 function formatarTelefone(input) {
