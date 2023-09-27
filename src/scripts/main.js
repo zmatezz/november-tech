@@ -1,5 +1,6 @@
 const iconMenu = document.querySelector("#i-menu");
 const iconClose = document.querySelector("#i-close");
+const backToTopButton = document.querySelector(".back-to-top");
 const navMobile = document.querySelector("#nav-mobile");
 const linksNav = document.querySelectorAll(".scroll-link");
 
@@ -61,12 +62,25 @@ linksNav.forEach((link) => {
   });
 });
 
-window.onresize = function () {
+window.onresize = () => {
   if (window.innerWidth >= 1024) {
-    alterarIcone(iconClose, iconMenu);
-    estadoNavMobile(false);
+      alterarIcone(iconClose, iconMenu);
+      estadoNavMobile(false);
   }
 };
+
+const teste = window.scrollY;
+
+
+window.onscroll = () => {
+  if (window.scrollY > 500) {
+    backToTopButton.classList.remove('hide');
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+    backToTopButton.classList.add('hide');
+  }
+}
 
 /* Matheus */
 document.addEventListener("DOMContentLoaded", function () {
@@ -130,19 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
       dateFormat: "dd/mm/yy",
     });
   });
-
-  function formatarTelefone(input) {
-    let numero = input.value.replace(/\D/g, "");
-
-    if (numero.length > 2) {
-      numero = "(" + numero.substring(0, 2) + ") " + numero.substring(2);
-    }
-    if (numero.length > 10) {
-      numero = numero.substring(0, 10) + "-" + numero.substring(10);
-    }
-
-    input.value = numero;
-  }
 });
 
 function formatarTelefone(input) {
